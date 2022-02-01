@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [isOn, setIsOn] = useState();
+
+  const incrementCount = () => {
+    setCount(prevCount => prevCount + 1 );
+  }
+
+  const toggleLight = () =>{
+    setIsOn(prevIsOn=> !prevIsOn);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Counter</h2>
+      <button onClick={incrementCount}>Clicked {count} times</button>
+      <h2>Toggle Light</h2>
+      <div onClick={toggleLight} style={{width:"50px", height:"50px", background: isOn ? "yellow" : "grey"}}>
+
+      </div>
     </div>
+    
   );
 }
 
