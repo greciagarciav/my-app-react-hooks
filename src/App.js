@@ -65,10 +65,10 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div style={{display:'grid', alignItems:'center', justifyItems:'center'}}>
       <h2>Counter</h2>
       <button onClick={incrementCount}>Clicked {count} times</button>
-      <h2>Toggle Light</h2>
+      <h2 style={{paddingTop:'25px'}}>Toggle Light</h2>
       <img  src={
               isOn 
                   ? 'https://static.thenounproject.com/png/16966-200.png' 

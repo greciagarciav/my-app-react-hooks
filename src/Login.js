@@ -18,7 +18,7 @@ export default function Login(){
 
     return(
         <div style={{
-            textAlign:'center'
+            textAlign:'center', paddingBottom:'25px'
         }}>
             <h2>Login</h2>
             <form style={{display:'grid', alignItems:'center', justifyItems:'center'}} onSubmit={handleSubmit}>
